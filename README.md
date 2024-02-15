@@ -15,7 +15,8 @@ You can run experiments with XGBoost, Random Forest, Logistic Regression, N-Gram
 ```
 python main.py
 ```
-By default, it runs experiments with all methods using TF-IDF feature extractor <br>
+By default, it runs experiments with all methods, except RuBert, using TF-IDF feature extractor <br>
  - You can select models for experiments by changing the corresponding list ```models``` in ```main.py``` <br>
  - You can also select feature extractor for experiments by changing the value of ```final_feature_extractor``` in ```main.py```
 
+In order to use RuBert you need to install ```torch``` and ```torchvision``` with versions that suit your GPU and ```cuda```. <br>

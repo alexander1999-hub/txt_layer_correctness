@@ -28,7 +28,7 @@ class XGBoost(AbstractModel):
             X=feature_extractor.transform(train_texts),
             y=train_labels,
             eval_set=[(feature_extractor.transform(eval_texts), eval_labels)],
-            verbose_eval=False,
+            verbose=False,
         )
         joblib.dump(self.model, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models', 'xgb.pkl'), compress=False)
 
