@@ -7,7 +7,7 @@ In this repository you can run experiments with all methods described in paper.
 You can create virtual environment with ```requirenets.txt```
 
 ## Dataset
-Synthetic dataset for trainig and benchmark dataset will dounload automatically when running ```main.py```. <br>
+Synthetic dataset for training and benchmark dataset will download automatically when running ```main.py```. <br>
 All data will be stored in a ```./data``` folder that will also be created automatically. </br>
 
 ## Experiments

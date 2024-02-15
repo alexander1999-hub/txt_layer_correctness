@@ -67,11 +67,11 @@ if __name__ == '__main__':
     forest = RandomForest(from_checkpoint=False)
     logreg = LogRegression(from_checkpoint=False)
     xgb = XGBoost(from_checkpoint=False)
-    n_gram = NGram(from_checkpoint=False, ngram_num=1, laplace=True) # choose type of a model you want to use on n-grams
-    rubert = Bert(from_checkpoint=False)
+    n_gram = NGram(from_checkpoint=False, ngram_num=1, laplace=True)  # choose type of a model you want to use on n-grams
+    # rubert = Bert(from_checkpoint=False)  # uncomment and add to models if you want to run experiments with RuBert
 
     # create list of models for experiments
-    models = [xgb, forest, logreg, n_gram, rubert]
+    models = [xgb, forest, logreg, n_gram]  # Rubert is not added by default
 
     # create dataset
     dataset_creator = Dataset(synthetic_data_root=synthetic_data_dir,
@@ -80,8 +80,8 @@ if __name__ == '__main__':
     benchmark_dataset = dataset_creator.create_benchmark_dataset()
 
     # create feature extractors
-    tf_idf_feature_extractor = TFIDF(train_data=synthetic_dataset[0]) # feature extractor based on TF-IDF
-    custom_feature_extractor = CustomFeatureExtractor() # feature extractor based on heuristically chosen features
+    tf_idf_feature_extractor = TFIDF(train_data=synthetic_dataset[0])  # feature extractor based on TF-IDF
+    custom_feature_extractor = CustomFeatureExtractor()  # feature extractor based on heuristically chosen features
 
     # choose feature extractor for experiments
     final_feature_extractor = tf_idf_feature_extractor
