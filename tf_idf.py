@@ -1,8 +1,9 @@
-from abstract_feature_extractor import AbstractFeatureExtractor
-from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.pipeline import Pipeline
 from typing import List
+
+from abstract_feature_extractor import AbstractFeatureExtractor
 
 
 class TFIDF(AbstractFeatureExtractor):

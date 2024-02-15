@@ -1,12 +1,13 @@
-import numpy as np
-from abstract_model import AbstractModel
-from sklearn.linear_model import LogisticRegression
-from abstract_feature_extractor import AbstractFeatureExtractor
-from typing import List, Dict, Optional
 import joblib
-import time
+import numpy as np
 import os
+import time
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
+from typing import Dict, List, Optional
+
+from abstract_feature_extractor import AbstractFeatureExtractor
+from abstract_model import AbstractModel
 
 
 class LogRegression(AbstractModel):

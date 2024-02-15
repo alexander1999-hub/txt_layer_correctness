@@ -1,13 +1,13 @@
-import numpy as np
-
-from abstract_model import AbstractModel
-from xgboost import XGBClassifier
-from abstract_feature_extractor import AbstractFeatureExtractor
-from typing import List, Dict, Optional
 import joblib
-import time
+import numpy as np
 import os
+import time
 from sklearn.metrics import classification_report
+from typing import Dict, List, Optional
+from xgboost import XGBClassifier
+
+from abstract_feature_extractor import AbstractFeatureExtractor
+from abstract_model import AbstractModel
 
 
 class XGBoost(AbstractModel):

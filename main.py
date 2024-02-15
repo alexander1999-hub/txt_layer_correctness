@@ -1,17 +1,18 @@
-from forest import RandomForest
-from logreg import LogRegression
-from xgb import XGBoost
-from abstract_model import AbstractModel
-from tf_idf import TFIDF
 import os
 import wget
 import zipfile
-from dataset import Dataset
-from abstract_feature_extractor import AbstractFeatureExtractor
-from custom_feature_extractor import CustomFeatureExtractor
-from n_gram import NGram
 from typing import Dict, List, Tuple
+
+from abstract_feature_extractor import AbstractFeatureExtractor
+from abstract_model import AbstractModel
 from bert import Bert
+from custom_feature_extractor import CustomFeatureExtractor
+from dataset import Dataset
+from forest import RandomForest
+from logreg import LogRegression
+from n_gram import NGram
+from tf_idf import TFIDF
+from xgb import XGBoost
 
 
 def train_and_test_one_model(model: AbstractModel, feature_extractor: AbstractFeatureExtractor,

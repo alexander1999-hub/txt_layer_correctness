@@ -1,5 +1,6 @@
 import abc
-from typing import List, Dict, Optional
+from typing import Dict, List, Optional
+
 from abstract_feature_extractor import AbstractFeatureExtractor
 
 

@@ -1,20 +1,18 @@
+import joblib
+import numpy as np
+import os
 import os
 import pickle
 import re
-import numpy as np
-
-from nltk.lm import MLE, Laplace
+import time
+from nltk.lm import Laplace, MLE
 from nltk.lm.preprocessing import padded_everygram_pipeline
 from nltk.util import ngrams
-
-
-from abstract_model import AbstractModel
-from abstract_feature_extractor import AbstractFeatureExtractor
-from typing import List, Dict, Optional
-import joblib
-import time
-import os
 from sklearn.metrics import classification_report, f1_score
+from typing import Dict, List, Optional
+
+from abstract_feature_extractor import AbstractFeatureExtractor
+from abstract_model import AbstractModel
 
 
 class NGram(AbstractModel):

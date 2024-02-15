@@ -1,9 +1,9 @@
-from collections import defaultdict
-from typing import List
-from abstract_feature_extractor import AbstractFeatureExtractor
-
 import numpy as np
 import pandas as pd
+from collections import defaultdict
+from typing import List
+
+from abstract_feature_extractor import AbstractFeatureExtractor
 
 
 class CustomFeatureExtractor(AbstractFeatureExtractor):
